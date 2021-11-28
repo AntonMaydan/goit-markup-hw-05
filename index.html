@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
             integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" href="./css/styles.css">
     </head> 
     <body>
@@ -54,7 +55,7 @@
             <section class="hero">
                 <div class="hero-container">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-btn btn" type="button">Заказать услугу</button> 
+                    <button class="hero-btn btn" type="button" data-modal-open>Заказать услугу</button> 
                 </div>
             </section>  
             <!-- первый контент текст-->
@@ -110,9 +111,24 @@
                 <div class="container">
                     <h2 class="work-title">Чем мы занимаемся</h2>
                     <ul class="list work-list">
-                        <li class="work-item"><img src="./images/work-img1.jpg" alt="набор кода" width="370" height="294"></li>
-                        <li class="work-item"><img src="./images/work-img2.jpg" alt="мобильные приложения" width="370" height="294"></li>
-                        <li class="work-item"><img src="./images/work-img3.jpg" alt="планшетные предложения" width="370" height="294"></li>
+                        <li class="work-item">
+                            <div class="work-item-wrap">
+                                <img src="./images/work-img1.jpg" alt="набор кода" width="370" height="294">
+                                <p class="work-item-top-text">Десктопные приложения</p>
+                            </div>
+                        </li>
+                        <li class="work-item">
+                            <div class="work-item-wrap">
+                                <img src="./images/work-img2.jpg" alt="мобильные приложения" width="370" height="294">
+                                <p class="work-item-top-text">Мобильные приложения</p>
+                            </div>
+                        </li>
+                        <li class="work-item">
+                            <div class="work-item-wrap">
+                                <img src="./images/work-img3.jpg" alt="планшетные предложения" width="370" height="294">
+                                <p class="work-item-top-text">Дизайнерские решения</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -400,6 +416,16 @@
                 </ul>
             </div>
         </footer>   
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>
+                    <svg class="modal-close-icon" widht="18" height="18 ">
+                        <use href="./images/icons.svg#icon-Vector"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
 
